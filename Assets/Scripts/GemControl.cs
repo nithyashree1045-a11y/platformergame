@@ -4,6 +4,7 @@ public class GemControl : MonoBehaviour
 {
     public int rotateSpeed = 2;
     public AudioSource gemCollect;
+    public int gemScore = 100;
 
     void Update()
     {
@@ -12,7 +13,8 @@ public class GemControl : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        gemCollect.Play();
+		ScoreControl.totalScore += gemScore;
+		gemCollect.Play();
         Destroy(gameObject);
     }
 }

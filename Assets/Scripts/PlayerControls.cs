@@ -37,7 +37,7 @@ public class PlayerControls : MonoBehaviour
 		controller.Move(move * speed * Time.deltaTime);
 	}
 
-        if (Input.GetKey(KeyCode.E) && groundedPlayer)
+        if (Input.GetKey(KeyCode.Space) && groundedPlayer)
         {
             isJumping = true;
             activeChar.GetComponent<Animator>().Play("Jump");
