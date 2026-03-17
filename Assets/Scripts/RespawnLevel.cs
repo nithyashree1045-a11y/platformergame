@@ -6,6 +6,7 @@ public class RespawnLevel : MonoBehaviour
     
     void Start()
     {
-        SceneManager.LoadScene(4);
+		ScoreControl.totalScore = 0;
+		SceneManager.LoadScene(4);
     }
 }
